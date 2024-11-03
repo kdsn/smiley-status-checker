@@ -3,8 +3,8 @@ name: Deploy to Hostinger via FTP
 on:
   push:
     branches:
-      - main
-
+      - main  
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,8 +16,9 @@ jobs:
       - name: Upload files to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          ftp-server: ftp://${{ secrets.FTP_SERVER }}:${{ secrets.FTP_PORT }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /public_html
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}  
+          local-dir: ./ 
+          server-dir: /public_html  
