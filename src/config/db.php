@@ -1,11 +1,11 @@
 <?php
 // Indlæs miljøvariabler fra .env
-$env = parse_ini_file(__DIR__ . '/../../.env');
+$env = parse_ini_file(__DIR__ . '/../.env');
 
-$host = $env['PRODUCTION_DB_HOST'] ?? 'localhost';
-$dbname = $env['PRODUCTION_DB_NAME'] ?? 'dbname';
-$user = $env['PRODUCTION_DB_USER'] ?? 'dbuser';
-$pass = $env['PRODUCTION_DB_PASS'] ?? 'pass';
+$host = $env['PRODUCTION_DB_HOST'];
+$dbname = $env['PRODUCTION_DB_NAME'];
+$user = $env['PRODUCTION_DB_USER'];
+$pass = $env['PRODUCTION_DB_PASS'];
 
 // Opret forbindelse med PDO
 try {

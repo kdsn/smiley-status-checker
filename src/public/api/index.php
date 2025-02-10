@@ -2,6 +2,10 @@
 header('Content-Type: application/json');
 require_once __DIR__ . '/../../config/db.php';
 
+echo "test api";
+
+die();
+
 // Gets 'navnelbnr' from URL
 $navnelbnr = isset($_GET['navnelbnr']) ? (int) $_GET['navnelbnr'] : 0;
 
