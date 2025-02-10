@@ -5,6 +5,7 @@
 [![Contributors](https://img.shields.io/github/contributors/kdsn/smiley-status-checker)](https://github.com/kdsn/smiley-status-checker/graphs/contributors)
 ![GitHub Workflow Status](https://github.com/kdsn/smiley-status-checker/actions/workflows/ci.yml/badge.svg)
 
+
 🔹 **Short description:**  
 Smiley Status Checker is a PHP-based API with an HTML/CSS frontend that facilitates access to the latest Danish Food Administration inspection results, represented as smileys. This tool is designed for businesses needing to automatically update the smiley statuses on their websites, ensuring compliance and transparency in food safety.
 
