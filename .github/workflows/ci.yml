@@ -22,8 +22,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./src/   # Sørg for, at src/ er korrekt
-          server-dir: /public_html/  # Tjek at dette er korrekt
-          timeout: 600   # For at undgå timeout på store uploads
-          log-level: standard  # Muligheder: minimal, standard, verbose
-          fail-on-error: true  # Stop workflow hvis der opstår fejl
+          local-dir: ./src/
+          server-dir: /public_html/
