@@ -25,6 +25,3 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           local-dir: ./src/
           server-dir: /public_html/
-
-    notifications:
-      email: false  # 🚀 Disables email notifications for this workflow
