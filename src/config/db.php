@@ -1,6 +1,6 @@
 <?php
 // Indlæs miljøvariabler fra .env
-$env = parse_ini_file(__DIR__ . '/../.env');
+$env = parse_ini_file(__DIR__ . '../../.env');
 
 $host = $env['PRODUCTION_DB_HOST'];
 $dbname = $env['PRODUCTION_DB_NAME'];
