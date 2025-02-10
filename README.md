@@ -1,69 +1,49 @@
-# 📌 Project Name
+# 📌 Smiley Status Checker
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/kdsn/project-template/build.yml?branch=main)](https://github.com/kdsn/project-template/actions)
-[![License](https://img.shields.io/github/license/kdsn/project-template)](LICENSE)
-[![Contributors](https://img.shields.io/github/contributors/kdsn/project-template)](https://github.com/kdsn/project-template/graphs/contributors)
-![GitHub Workflow Status](https://github.com/kdsn/project-template/actions/workflows/ci.yml/badge.svg)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/kdsn/smiley-status-checker/build.yml?branch=main)](https://github.com/kdsn/smiley-status-checker/actions)
+[![License](https://img.shields.io/github/license/kdsn/smiley-status-checker)](LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/kdsn/smiley-status-checker)](https://github.com/kdsn/smiley-status-checker/graphs/contributors)
+![GitHub Workflow Status](https://github.com/kdsn/smiley-status-checker/actions/workflows/ci.yml/badge.svg)
 
 🔹 **Short description:**  
-A concise explanation of what the project does.
+Smiley Status Checker is a PHP-based API with an HTML/CSS frontend that facilitates access to the latest Danish Food Administration inspection results, represented as smileys. This tool is designed for businesses needing to automatically update the smiley statuses on their websites, ensuring compliance and transparency in food safety.
 
 ## **Demo / Live Version**
-[🔗 Se live her](https://din-live-url.com) *(hvis relevant)*
+[🔗 Se live her](https://smileycheck.dk)
 
 ## **Screenshots**
 ![Screenshot](docs/screenshot1.png)  
 *(Tilføj relevante billeder, der viser UI eller funktionalitet)*
 
 ## Features
-  ✅ Feature 1 <br/>
-  ✅ Feature 2 <br/>
-  ✅ Feature 3 <br/>
+  ✅ **API Access**: Provides programmatic access to the latest inspection smiley statuses. <br/>
+  ✅ **Web Interface**: Allows manual searches and displays smileys directly through a web browser. <br/>
+  ✅ **Direct Links**: Offers direct links to detailed inspection reports on the Danish Food Administration's official website. <br/>
 
 ## Tech Stack & Dependencies
-| Technology | Version |
-|---------|---------|
-| Python  | 3.10    |
-| React   | 18.2.0  |
-| Node.js | 16.x    |
-| PHP     | 8.4     |
 
-## Installation
-```bash
-# 1. Clone the repository
-git clone https://github.com/USERNAME/PROJECT.git
-
-# 2. Navigate to the project directory
-cd PROJECT
-
-# 3. Install dependencies
-npm install  # or pip install -r requirements.txt
-
-# 4. Start the application
-npm start  # or python main.py
-```
-
-## Brug / Quick Start
-```bash
-# Eksempel på hvordan man kører eller bruger projektet
-command --option value
-```
+| Technology        | Version |
+|-------------------|---------|
+| **backend**       |         |
+| PHP               | 8.3     |
+| MariaDB           | 10.11   |
+| **Webserver**     |         |
+| Apache            | 2.0     |
+| **Frontend**      |         |
+| HTML              |         |
+| CSS               |         |
+| JS                |         |
+| **Dependencies**  |         |
+| PHP XML Extension |         |
 
 ## API Documentation
-(Include only if the project exposes an API.)
-
-- **GET /endpoint** → Description
-- **POST /endpoint** → Description
  
 Refer to [`docs/api-reference.md`](docs/api-reference.md) for full API details.
 
 ## Architecture & Design
-(Provide a brief explanation or link to [`docs/architecture.md`](docs/architecture.md).)
+Refer to [`docs/architecture.md`](docs/architecture.md) for details.
 
 ## Roadmap & Future Updates
-- Feature 1
-- Feature 2
-- Feature 3
 
 See full roadmap in [`docs/roadmap.md`](docs/roadmap.md).
 
@@ -75,6 +55,3 @@ Found a bug? [Open an issue](https://github.com/kdsn/project-template/issues).
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
-
-## Acknowledgments
-(Optional section to credit contributors, frameworks, or tools.)

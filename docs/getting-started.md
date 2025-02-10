@@ -16,7 +16,7 @@ Before you begin, ensure you have the following installed:
 
 Verify installations:
 ```sh
-node -v  # Check Node.js version
+node -v  # Check Node.scripts version
 python --version  # Check Python version
 docker --version  # Check Docker version
 ```
@@ -98,7 +98,7 @@ sudo chmod +x setup.sh
 
 If dependencies fail, run:
 ```sh
-npm rebuild  # for Node.js
+npm rebuild  # for Node.scripts
 pip install --force-reinstall -r requirements.txt  # for Python
 ```
 

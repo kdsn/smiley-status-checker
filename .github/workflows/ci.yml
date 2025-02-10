@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - dev
   pull_request:
     branches:
       - main
@@ -17,15 +16,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: |
-          if [ -f package.json ]; then npm install; fi
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: Run tests
-        run: |
-          if [ -f package.json ]; then npm test; fi
-          if [ -f pytest.ini ] || [ -d tests ]; then pytest; fi
+      - name: Upload files to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: ./src/
+          server-dir: /public_html/
 
     notifications:
       email: false  # 🚀 Disables email notifications for this workflow

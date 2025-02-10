@@ -79,7 +79,7 @@ For Node.js:
 
 
 ```sh
-node index.js --config=config.json
+node index.scripts --config=config.json
 ```
 
 --- 

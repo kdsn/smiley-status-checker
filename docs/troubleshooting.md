@@ -36,7 +36,7 @@ npm start  # or python main.py
 #### 🛠 Solution:
 1. Reinstall dependencies:
 ```sh
-npm install  # for Node.js
+npm install  # for Node.scripts
 pip install -r requirements.txt  # for Python
 ```
 

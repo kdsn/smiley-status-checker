@@ -1,0 +1,42 @@
+# Protect hidden files and directories
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Disable directory browsing
+Options -Indexes
+
+# Enable URL rewriting
+RewriteEngine On
+RewriteBase /
+
+# Set domain variable only on initial request
+RewriteCond %{ENV:HOSTNAME_ENV} !=smileycheck.dk
+RewriteRule ^ - [E=HOSTNAME_ENV:smileycheck.dk]
+
+# Deny access to certain directories
+RewriteRule ^(src|data|cron)/ - [F,L]
+
+# Redirect HTTP to HTTPS - Uncomment the next two lines if SSL is configured
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Rewrite URL for API access (e.g. /api/v1/endpoint)
+RewriteCond %{THE_REQUEST} \s/api/v1/ [NC]
+RewriteRule ^api/v1/(.*)$ /public/api/index.php?request=$1 [QSA,END]
+
+# Map site to /public
+RewriteRule ^$ /public/ [L]
+
+# Handle Front Controller pattern for clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/ [QSA,L]
+
+# Redirect all not found pages to index.php
+ErrorDocument 404 /public/index.php
+
+# Set the ENV to either development or production
+SetEnv ENV development

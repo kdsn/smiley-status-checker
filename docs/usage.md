@@ -10,7 +10,7 @@ Before using **[Project Name]**, make sure you have installed it correctly. If n
 ### **Starting the Application**
 #### **Option 1: Run Locally**
 ```sh
-npm start  # for Node.js
+npm start  # for Node.scripts
 python main.py  # for Python
 ```
 #### **Option 2: Run with Docker**

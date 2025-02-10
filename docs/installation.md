@@ -19,7 +19,7 @@ Before installing, ensure you have the following installed on your system:
 Run the following commands to check if the necessary software is installed:
 ```sh
 git --version
-node -v       # Check Node.js version
+node -v       # Check Node.scripts version
 python --version  # Check Python version
 docker --version  # Check Docker version
 ```
@@ -97,7 +97,7 @@ sudo chmod +x setup.sh
 
 **Dependencies failing?** Run:
 ```sh
-npm rebuild  # for Node.js
+npm rebuild  # for Node.scripts
 pip install --force-reinstall -r requirements.txt  # for Python
 ```
 
