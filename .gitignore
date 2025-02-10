@@ -1,0 +1,11 @@
+# Node.js
+node_modules/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# General
+.DS_Store
+*.env

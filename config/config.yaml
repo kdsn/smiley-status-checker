@@ -1,0 +1,48 @@
+# Default Configuration File
+app:
+  name: "MyApp"
+  version: "1.0.0"
+  debug: false  # Set to true for development
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  environment: "production"  # Options: development, staging, production
+
+database:
+  engine: "postgresql"
+  host: "localhost"
+  port: 5432
+  username: "db_user"
+  password: "securepassword"
+  name: "my_database"
+  pool_size: 10
+  timeout: 30  # Connection timeout in seconds
+
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/app.log"
+
+security:
+  secret_key: "CHANGE_ME_SECRET_KEY"  # Should be overridden in production
+  allow_cors: false  # Set to true if API needs to allow CORS
+
+api:
+  key: "CHANGE_ME_API_KEY"
+  timeout: 5  # Timeout for API calls in seconds
+  retries: 3  # Number of retry attempts for failed requests
+
+features:
+  enable_feature_x: true
+  enable_feature_y: false
+  maintenance_mode: false
+
+# List of authorized users (example for an authentication system)
+users:
+  - username: "admin"
+    role: "superuser"
+  - username: "user1"
+    role: "editor"
+  - username: "user2"
+    role: "viewer"

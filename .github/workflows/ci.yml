@@ -1,0 +1,31 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then npm install; fi
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run tests
+        run: |
+          if [ -f package.json ]; then npm test; fi
+          if [ -f pytest.ini ] || [ -d tests ]; then pytest; fi
+
+    notifications:
+      email: false  # 🚀 Disables email notifications for this workflow
