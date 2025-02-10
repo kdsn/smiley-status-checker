@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Upload files to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -22,9 +22,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
           local-dir: ./src/
-          server-dir: /public_html/
-
-    notifications:
-      email: false  # 🚀 Disables email notifications for this workflow
+          server-dir: /
